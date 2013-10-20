@@ -10,3 +10,8 @@ Modules
 * Brewery
 * Library
 * Monastery
+
+Documentation
+=============
+
+http://kktua.readthedocs.org/en/latest/
