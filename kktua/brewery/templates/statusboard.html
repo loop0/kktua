@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <img class="kktua-logo" src="{{ MEDIA_URL }}images/logo_kktua.png" />
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Cerveja</th>
+                            <th>Estilo</th>
+                            <th width="100" class="center">Brassagem</th>
+                            <th width="100" class="center">Quantidade</th>
+                            <th width="100" class="center">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for batch in object_list %}
+                    <tr>
+                        <td>{{ batch.beer.name }}</td>
+                        <td>{{ batch.beer.style.name }}</td>
+                        <td class="center">{{ batch.brewday|date:"d/m/Y" }}</td>
+                        <td class="center">{{ batch.quantity }}L</td>
+                        <td class="center"><span class="label {{ batch.get_status_label }}">{{ batch.get_status_display }}</span></td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+{% endblock %}

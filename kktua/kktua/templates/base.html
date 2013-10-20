@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="{{ MEDIA_URL }}bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="{{ MEDIA_URL }}kktua.css" rel="stylesheet" media="screen">
+</head>
+<body style="padding-top: 30px;">
+{% block content %}{% endblock %}
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{{ MEDIA_URL }}jquery-1.10.2.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{{ MEDIA_URL }}bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
